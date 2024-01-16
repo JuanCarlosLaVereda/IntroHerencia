@@ -3,8 +3,8 @@ package Ejercicio4;
 public abstract class Vehiculo {
     private int velocidad;
 
-    public Vehiculo(int velocidad){
-        this.velocidad = velocidad;
+    public Vehiculo(){
+        this.velocidad = 0;
     }
 
     public int getVelocidad() {
@@ -20,6 +20,9 @@ public abstract class Vehiculo {
     public void decrementarVelocidad(){
         velocidad--;
     }
+
+    public abstract boolean acelerar(int unidades);
+    public abstract boolean frenar(int unidades);
 
     @Override
     public String toString(){
