@@ -17,6 +17,26 @@ public class JefeZona extends Empleado{
         this.vendedores = vendedores;
     }
 
+    public String getDespacho() {
+        return despacho;
+    }
+    public Coche getCoche() {
+        return coche;
+    }
+    public Secretario getSecretario() {
+        return secretario;
+    }
+    public Vendedor[] getVendedores() {
+        return vendedores;
+    }
+
+    public void cambiarCoche(Coche coche){
+        this.coche = coche;
+    }
+    public void cambiarSecretario(Secretario secretario){
+        this.secretario = secretario;
+    }
+
     @Override
     public boolean cambiarSupervisor(Empleado supervisor){
         if (!(supervisor instanceof JefeZona)){
@@ -33,7 +53,10 @@ public class JefeZona extends Empleado{
 
     @Override
     public String toString(){
-
+        return "-----JefeZona----" + super.toString() +
+                "\nDespacho: " + despacho +
+                "\nSecretario personal: " + secretario +
+                coche;
     }
 
 }

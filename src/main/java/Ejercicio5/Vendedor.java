@@ -45,7 +45,7 @@ public class Vendedor extends Empleado{
 
     @Override
     public String toString(){
-        return "------Empleado-----" + super.toString() +
+        return "------Vendedor-----" + super.toString() +
                 coche.toString() +
                 "\nArea de venta: " + areVenta +
                 "\nComision en porcentaje: " + comision + "%";
